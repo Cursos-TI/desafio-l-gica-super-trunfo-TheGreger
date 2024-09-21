@@ -86,79 +86,154 @@ int main() {
     printf("************************\n");
     printf("Começando a comparação entre as cartas das cidades %s e %s.\n",
         nomeCartaUm, nomeCartaDois);
-    printf("Escolha uma opção\n");
-    printf("1. População\n");
-    printf("2. Área\n");
-    printf("3. PIB\n");
-    printf("4. PIB per Capita\n");
-    printf("5. Densidade Populacional\n");
-    printf("6. Sair\n");
+    printf("Escolha uma opção de comparação entre as cartas\n");
+    printf("1. População e Área\n");
+    printf("2. População e PIB\n");
+    printf("3. População e PIB per Capita\n");
+    printf("4. População e Densidade Populacional\n");
+    printf("5. Área e PIB\n");
+    printf("6. Área e PIB per Capita\n");
+    printf("7. Área e Densidade Populacional\n");
+    printf("8. PIB e PIB per capita\n");
+    printf("9. PIB e Densidade Populacional\n");
+    printf("10. PIB per Capita e Densidade Populacional\n");
+    printf("11. Sair\n");
     printf("Escolha: ");
     scanf("%d", &escolhaComparacao);
     printf("************************\n");
 
     switch (escolhaComparacao) {
     case 1:
-        if (populacaoCartaUm > populacaoCartaDois) {
-        printf("A população de %s é maior que a população de %s.\n", nomeCartaUm, nomeCartaDois);
-        vitoriasCartaUm++;
-        } else if (populacaoCartaUm < populacaoCartaDois) {
-            printf("A população de %s é maior que a população de %s.\n", nomeCartaDois, nomeCartaUm);
-            vitoriasCartaDois++;
-        } else {
-            printf("A população de %s é igual a população de %s.\n", nomeCartaUm, nomeCartaDois);
+        if (populacaoCartaUm != populacaoCartaDois) {
+            populacaoCartaUm > populacaoCartaDois ?
+                printf("A população de %s é maior que a população de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A população de %s é maior que a população de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (areaCartaUm != areaCartaDois) {
+            areaCartaUm > areaCartaDois ?
+                printf("A área de %s é maior que a área de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A área de %s é maior que a área de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
         }
         printf("************************\n");
         break;
     case 2:
-        if (areaCartaUm > areaCartaDois) {
-        printf("A área de %s é maior que a área de %s.\n", nomeCartaUm, nomeCartaDois);
-        vitoriasCartaUm++;
-        } else if (areaCartaUm < areaCartaDois) {
-            printf("A área de %s é maior que a área de %s.\n", nomeCartaDois, nomeCartaUm);
-            vitoriasCartaDois++;
-        } else {
-            printf("A área de %s é igual a área de %s.\n", nomeCartaUm, nomeCartaDois);
+        if (populacaoCartaUm != populacaoCartaDois) {
+            populacaoCartaUm > populacaoCartaDois ?
+                printf("A população de %s é maior que a população de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A população de %s é maior que a população de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (pibCartaUm != pibCartaDois) {
+            pibCartaUm > pibCartaDois ?
+                printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
         }
         printf("************************\n");
         break;
     case 3:
-        if (pibCartaUm > pibCartaDois) {
-        printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaUm, nomeCartaDois);
-        vitoriasCartaUm++;
-        } else if (pibCartaUm < pibCartaDois) {
-            printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaDois, nomeCartaUm);
-            vitoriasCartaDois++;
-        } else {
-            printf("O PIB de %s é igual ao PIB de %s.\n", nomeCartaUm, nomeCartaDois);
+        if (populacaoCartaUm != populacaoCartaDois) {
+            populacaoCartaUm > populacaoCartaDois ?
+                printf("A população de %s é maior que a população de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A população de %s é maior que a população de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (pibPerCapitaCartaUm != pibPerCapitaCartaDois) {
+            pibPerCapitaCartaUm > pibPerCapitaCartaDois ?
+                printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
         }
         printf("************************\n");
         break;
     case 4:
-        if (pibPerCapitaCartaUm > pibPerCapitaCartaDois) {
-        printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaUm, nomeCartaDois);
-        vitoriasCartaUm++;
-        } else if (pibPerCapitaCartaUm < pibPerCapitaCartaDois) {
-            printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaDois, nomeCartaUm);
-            vitoriasCartaDois++;
-        } else {
-            printf("O PIB per capita de %s é igual ao PIB per capita de %s.\n", nomeCartaUm, nomeCartaDois);
+        if (populacaoCartaUm != populacaoCartaDois) {
+            populacaoCartaUm > populacaoCartaDois ?
+                printf("A população de %s é maior que a população de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A população de %s é maior que a população de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (densidadePopulacionalCartaUm != densidadePopulacionalCartaDois) {
+            densidadePopulacionalCartaUm < densidadePopulacionalCartaDois ?
+                printf("A densidade populacional de %s é menor que a de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A densidade populacional de %s é menor que a de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
         }
         printf("************************\n");
         break;
     case 5:
-        if (densidadePopulacionalCartaUm < densidadePopulacionalCartaDois) {
-        printf("A densidade populacional de %s é menor que a densidade de %s.\n", nomeCartaUm, nomeCartaDois);
-        vitoriasCartaUm++;
-        } else if (densidadePopulacionalCartaUm > densidadePopulacionalCartaDois) {
-            printf("A densidade populacional de %s é menor que a densidade de %s.\n", nomeCartaDois, nomeCartaUm);
-            vitoriasCartaDois++;
-        } else {
-            printf("O PIB per capita de %s é igual ao PIB per capita de %s.\n", nomeCartaUm, nomeCartaDois);
+        if (areaCartaUm != areaCartaDois) {
+            areaCartaUm > areaCartaDois ?
+                printf("A área de %s é maior que a área de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A área de %s é maior que a área de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (pibCartaUm != pibCartaDois) {
+            pibCartaUm > pibCartaDois ?
+                printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
         }
         printf("************************\n");
         break;
     case 6:
+        if (areaCartaUm != areaCartaDois) {
+            areaCartaUm > areaCartaDois ?
+                printf("A área de %s é maior que a área de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A área de %s é maior que a área de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (pibPerCapitaCartaUm != pibPerCapitaCartaDois) {
+            pibPerCapitaCartaUm > pibPerCapitaCartaDois ?
+                printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        printf("************************\n");
+        break;
+    case 7:
+        if (areaCartaUm != areaCartaDois) {
+            areaCartaUm > areaCartaDois ?
+                printf("A área de %s é maior que a área de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A área de %s é maior que a área de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (densidadePopulacionalCartaUm != densidadePopulacionalCartaDois) {
+            densidadePopulacionalCartaUm < densidadePopulacionalCartaDois ?
+                printf("A densidade populacional de %s é menor que a de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A densidade populacional de %s é menor que a de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        printf("************************\n");
+        break;
+    case 8:
+        if (pibCartaUm != pibCartaDois) {
+            pibCartaUm > pibCartaDois ?
+                printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (pibPerCapitaCartaUm != pibPerCapitaCartaDois) {
+            pibPerCapitaCartaUm > pibPerCapitaCartaDois ?
+                printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        printf("************************\n");
+       break;
+    case 9:
+        if (pibCartaUm != pibCartaDois) {
+            pibCartaUm > pibCartaDois ?
+                printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("O PIB de %s é maior que o PIB de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (densidadePopulacionalCartaUm != densidadePopulacionalCartaDois) {
+            densidadePopulacionalCartaUm < densidadePopulacionalCartaDois ?
+                printf("A densidade populacional de %s é menor que a de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A densidade populacional de %s é menor que a de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        printf("************************\n");
+        break;
+    case 10:
+        if (pibPerCapitaCartaUm != pibPerCapitaCartaDois) {
+            pibPerCapitaCartaUm > pibPerCapitaCartaDois ?
+                printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("O PIB per capita de %s é maior que o PIB per capita de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        if (densidadePopulacionalCartaUm != densidadePopulacionalCartaDois) {
+            densidadePopulacionalCartaUm < densidadePopulacionalCartaDois ?
+                printf("A densidade populacional de %s é menor que a de %s.\n", nomeCartaUm, nomeCartaDois, vitoriasCartaUm++) 
+                : printf("A densidade populacional de %s é menor que a de %s.\n", nomeCartaDois, nomeCartaUm, vitoriasCartaDois++);
+        }
+        printf("************************\n");
+        break;
+    case 11:
         printf("Saindo do jogo...]\n");
         break;
     default:
